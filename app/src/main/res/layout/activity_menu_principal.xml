@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu_Principal"
+    android:background="@drawable/back_aplicacion">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="245dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/trianguilo" />
+
+    <Button
+        android:id="@+id/bton_tareas"
+        android:layout_width="93dp"
+        android:layout_height="91dp"
+        android:background="@drawable/tareas"
+        android:onClick="bton_tareas_mp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <TextView
+        android:id="@+id/text_tareas"
+        android:layout_width="51dp"
+        android:layout_height="16dp"
+        android:text="Tareas"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bton_tareas"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Button
+        android:id="@+id/bton_notas"
+        android:layout_width="93dp"
+        android:layout_height="91dp"
+        android:background="@drawable/notas"
+        android:onClick="bton_notas_mp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <TextView
+        android:id="@+id/text_notas"
+        android:layout_width="66dp"
+        android:layout_height="24dp"
+        android:text="Notas"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bton_tareas"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <Button
+        android:id="@+id/bton_maestros"
+        android:layout_width="93dp"
+        android:layout_height="91dp"
+        android:background="@drawable/maestros"
+        android:onClick="bton_maestros_mp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+    <TextView
+        android:id="@+id/text_maestros"
+        android:layout_width="66dp"
+        android:layout_height="24dp"
+        android:text="Maestros"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bton_tareas"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <Button
+        android:id="@+id/bton_materias"
+        android:layout_width="93dp"
+        android:layout_height="91dp"
+        android:background="@drawable/materias"
+        android:onClick="bton_materias_mp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <TextView
+        android:id="@+id/text_materias"
+        android:layout_width="66dp"
+        android:layout_height="24dp"
+        android:text="Materias"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bton_tareas"
+        app:layout_constraintVertical_bias="0.58" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
