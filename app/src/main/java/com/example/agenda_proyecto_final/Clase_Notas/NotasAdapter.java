@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasViewHolder>{
     private Context mContext;
-    private ArrayList<NotasItem> mCitaList;
+    private ArrayList<NotasItem> mNotaList;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{
@@ -26,9 +26,9 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasViewHol
         mListener = listener;
     }
 
-    public NotasAdapter(Context context, ArrayList<NotasItem> citaList){
+    public NotasAdapter(Context context, ArrayList<NotasItem> notaList){
         mContext = context;
-        mCitaList = citaList;
+        mNotaList = notaList;
     }
     @NonNull
     @Override
@@ -38,33 +38,24 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasViewHol
     }
     @Override
     public void onBindViewHolder(@NonNull NotasAdapter.NotasViewHolder holder, int position) {
-        NotasItem currentItem = mCitaList.get(position);
+        NotasItem currentItem = mNotaList.get(position);
 
         String titulo = currentItem.getntitulo();
-        String texto = currentItem.getntexto();
-        String fecha = currentItem.getmfecha();
-
 
         holder.mTitu.setText(titulo);
-        holder.mTextnot.setText(texto);
-        holder.mTextFecha.setText(fecha);
     }
 
     @Override
     public int getItemCount() {
-        return mCitaList.size();
+        return mNotaList.size();
     }
 
     public class NotasViewHolder extends RecyclerView.ViewHolder {
         public TextView mTitu;
-        public TextView mTextnot;
-        public TextView mTextFecha;
 
         public NotasViewHolder(@NonNull View itemView) {
             super(itemView);
-            mTitu = itemView.findViewById(R.id.tv_titulo_details);
-            mTextnot = itemView.findViewById(R.id.tv_fecha_details);
-            mTextFecha = itemView.findViewById(R.id.tv_texto_details);
+            mTitu = itemView.findViewById(R.id.edit_nom_not_recy);
 
             itemView.setOnClickListener(new View.OnClickListener(){
                 @Override

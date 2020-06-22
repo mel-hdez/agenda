@@ -2,6 +2,7 @@ package com.example.agenda_proyecto_final.Clase_Notas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +43,7 @@ import java.util.ArrayList;
             Bundle b = intent.getBundleExtra("user");
             id = b.getString("id");
 
-            mRecyclerView = findViewById(R.id.recycler_notas);
+            mRecyclerView = findViewById(R.id.recyclerView_notas);
             mRecyclerView.setHasFixedSize(true);
             mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
             mCitaList = new ArrayList<>();
@@ -60,22 +61,23 @@ import java.util.ArrayList;
 
 
     private void IngresoNotas() {
-        String url = "https://empuch.herokuapp.com/notas"+id;
+        String url = "https://proyectmel.herokuapp.com/notas.php?id="+id;
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
+                        Log.d("test", response.toString());
                         try{
                             for (int i = 0; i < response.length(); i++) {
                                 JSONObject Notas = response.getJSONObject(i);
-                                String titulo = Notas.getString("Titulo");
-                                String fecha = Notas.getString("Fecha");
-                                String texto = Notas.getString("Texto");
+                                String titulo = Notas.getString("nom_notas");
+                                String fecha = Notas.getString("fecha");
+                                String texto = Notas.getString("desc_notas");
                                 mCitaList.add(new NotasItem(titulo,texto,fecha));
                             }
                             mNotasAdapter = new NotasAdapter(Notas.this, mCitaList);
                             mRecyclerView.setAdapter(mNotasAdapter);
-                            mNotasAdapter.setOntItemClickListener(Notas.this);
+                            //mNotasAdapter.setOntItemClickListener(Notas.this);
                         }catch (JSONException e){
                             e.printStackTrace();
                         }
@@ -83,6 +85,7 @@ import java.util.ArrayList;
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.e("deletePost", "Error:" + error);
                 error.printStackTrace();
             }
         });
