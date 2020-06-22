@@ -7,10 +7,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.agenda_proyecto_final.Clases_Menu_Principal.Maestros;
-import com.example.agenda_proyecto_final.Clases_Menu_Principal.Materias;
-import com.example.agenda_proyecto_final.Clases_Menu_Principal.Notas;
-import com.example.agenda_proyecto_final.Clase_Tareas_General.Tareas;
+import com.example.agenda_proyecto_final.Clase_Maestro.Maestros;
+import com.example.agenda_proyecto_final.Clase_Materias.Materias;
+import com.example.agenda_proyecto_final.Clase_Notas.Notas;
+import com.example.agenda_proyecto_final.Clase_Tarea.Tareas;
 
 public class Menu_Principal extends AppCompatActivity {
 

@@ -1,6 +1,8 @@
-package com.example.agenda_proyecto_final.Clases_Menu_Principal;
+package com.example.agenda_proyecto_final.Clase_Materias;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,5 +14,10 @@ public class Materias extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materias);
+    }
+
+    public void bton_agregar_asignaturas(View view) {
+        Intent sig = new Intent(Materias.this, Registrar_asignatura.class);
+        startActivity(sig);
     }
 }
