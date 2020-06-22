@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Clase_Notas.Notas_details"></activity>
+        <activity android:name=".Clase_Notas.Modificar_Notas"></activity>
+        <activity android:name=".Clase_Notas.Notas_details" />
         <activity android:name=".Clase_Materias.Registrar_asignatura" />
         <activity android:name=".Clase_Notas.Registrar_notas" />
         <activity android:name=".Clase_Maestro.Registrar_maestros" />

@@ -12,10 +12,22 @@ public class NotasItem {
         public String getntitulo(){
             return ntitulo;
         }
+        public void setNtitulo(String titulo) {
+        this.ntitulo = titulo;
+    }
+
         public String getntexto(){
             return ntexto;
         }
+        public void ntexto(String texto) {
+        this.ntexto = texto;
+    }
+
         public String getmfecha(){
             return nfecha;
         }
+        public void nfecha(String fecha) {
+        this.nfecha = fecha;
+    }
+
 }
