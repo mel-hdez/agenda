@@ -29,6 +29,7 @@ import java.util.ArrayList;
     private ArrayList<NotasItem> mCitaList;
     private RequestQueue mRequestQueue;
     String id;
+    public static final String EXTRA_ID = "id";
     public static final String EXTRA_TITULO = "titulo";
     public static final String EXTRA_FECHA = "fecha";
     public static final String EXTRA_TEXTO = "texto";
@@ -70,10 +71,11 @@ import java.util.ArrayList;
                         try{
                             for (int i = 0; i < response.length(); i++) {
                                 JSONObject Notas = response.getJSONObject(i);
+                                String id = Notas.getString("id_notas");
                                 String titulo = Notas.getString("nom_notas");
                                 String fecha = Notas.getString("fecha");
                                 String texto = Notas.getString("desc_notas");
-                                mCitaList.add(new NotasItem(titulo,texto,fecha));
+                                mCitaList.add(new NotasItem(id,titulo,texto,fecha));
                             }
                             mNotasAdapter = new NotasAdapter(Notas.this, mCitaList);
                             mRecyclerView.setAdapter(mNotasAdapter);
@@ -96,9 +98,10 @@ import java.util.ArrayList;
         public void onItemClick(int position) {
             Intent detailIntent = new Intent(this, Notas_details.class);
             NotasItem clickedItem = mCitaList.get(position);
-            detailIntent.putExtra(EXTRA_TITULO, clickedItem.getntitulo());
-            detailIntent.putExtra(EXTRA_FECHA, clickedItem.getntexto());
-            detailIntent.putExtra(EXTRA_TEXTO, clickedItem.getmfecha());
+            detailIntent.putExtra(EXTRA_ID, clickedItem.getNid());
+            detailIntent.putExtra(EXTRA_TITULO, clickedItem.getNtitulo());
+            detailIntent.putExtra(EXTRA_FECHA, clickedItem.getNfecha());
+            detailIntent.putExtra(EXTRA_TEXTO, clickedItem.getNtexto());
             startActivity(detailIntent);
         }
     }

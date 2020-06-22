@@ -40,7 +40,7 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasViewHol
     public void onBindViewHolder(@NonNull NotasAdapter.NotasViewHolder holder, int position) {
         NotasItem currentItem = mNotaList.get(position);
 
-        String titulo = currentItem.getntitulo();
+        String titulo = currentItem.getNtitulo();
 
         holder.mTitu.setText(titulo);
     }

@@ -1,33 +1,44 @@
 package com.example.agenda_proyecto_final.Clase_Notas;
 
 public class NotasItem {
-        private String ntitulo, ntexto, nfecha;
+        private String nid, ntitulo, ntexto, nfecha;
 
-        public NotasItem(String titulo, String texto, String fecha){
+        public NotasItem(String id, String titulo, String texto, String fecha){
+            nid = id;
             ntitulo = titulo;
             ntexto = texto;
             nfecha = fecha;
         }
 
-        public String getntitulo(){
-            return ntitulo;
-        }
-        public void setNtitulo(String titulo) {
-        this.ntitulo = titulo;
+    public String getNid() {
+        return nid;
     }
 
-        public String getntexto(){
-            return ntexto;
-        }
-        public void ntexto(String texto) {
-        this.ntexto = texto;
+    public void setNid(String nid) {
+        this.nid = nid;
     }
 
-        public String getmfecha(){
-            return nfecha;
-        }
-        public void nfecha(String fecha) {
-        this.nfecha = fecha;
+    public String getNtitulo() {
+        return ntitulo;
     }
 
+    public void setNtitulo(String ntitulo) {
+        this.ntitulo = ntitulo;
+    }
+
+    public String getNtexto() {
+        return ntexto;
+    }
+
+    public void setNtexto(String ntexto) {
+        this.ntexto = ntexto;
+    }
+
+    public String getNfecha() {
+        return nfecha;
+    }
+
+    public void setNfecha(String nfecha) {
+        this.nfecha = nfecha;
+    }
 }

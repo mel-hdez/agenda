@@ -36,7 +36,7 @@
                 android:id="@+id/et_titulo_mod"
                 android:layout_width="282dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:maxLength="24" />
         </LinearLayout>
 
@@ -61,7 +61,7 @@
                 android:id="@+id/et_text_mod"
                 android:layout_width="285dp"
                 android:layout_height="51dp"
-                android:gravity="center"
+                android:gravity="left"
                 android:maxLength="24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
