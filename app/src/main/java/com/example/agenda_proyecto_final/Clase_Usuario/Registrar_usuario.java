@@ -63,7 +63,8 @@ public class Registrar_usuario extends AppCompatActivity  {
                             b.putString("id", separate[1]);
                             i.putExtra("user", b);
                             startActivity(i);
-                        } else {
+                        }
+                        else {
                             Toast.makeText(getApplicationContext(),"Ingrese un usuario y contraseña válido", Toast.LENGTH_SHORT).show();
                         }
                     }
