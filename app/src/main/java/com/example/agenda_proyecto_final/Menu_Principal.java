@@ -14,11 +14,14 @@ import com.example.agenda_proyecto_final.Clase_Tarea.Tareas;
 
 public class Menu_Principal extends AppCompatActivity {
 
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
-
+        Intent intent = getIntent();
+        Bundle b = intent.getBundleExtra("user");
+        id = b.getString("id");
 
 
 
@@ -31,6 +34,9 @@ public class Menu_Principal extends AppCompatActivity {
 
     public void bton_notas_mp(View view) {
         Intent sig = new Intent(Menu_Principal.this, Notas.class);
+        Bundle b = new Bundle();
+        b.putString("id", id);
+        sig.putExtra("user", b);
         startActivity(sig);
     }
 

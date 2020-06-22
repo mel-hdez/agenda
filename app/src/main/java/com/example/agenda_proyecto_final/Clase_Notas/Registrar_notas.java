@@ -31,7 +31,7 @@ public class Registrar_notas extends AppCompatActivity {
     EditText nombre_titulo, texto_nota,edDate;
     Button bton_guarda_not;
     DatePickerDialog mDatePickerDialog;
-
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +42,12 @@ public class Registrar_notas extends AppCompatActivity {
         bton_guarda_not = findViewById(R.id.bton_guarda_notas);
         edDate = (EditText) findViewById(R.id.edit_fecha);
 
-        setDateTimeField();edDate.setOnTouchListener(new View.OnTouchListener(){
+        Intent intent = getIntent();
+        Bundle b = intent.getBundleExtra("user");
+        id = b.getString("id");
+        setDateTimeField();
+
+        edDate.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 mDatePickerDialog.show();
@@ -83,15 +88,15 @@ public class Registrar_notas extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                response = response.replace("\n", "");
                 String[] separate = response.split("-");
 
                 if (separate[0].equals("1")) {
                     Intent i = new Intent(Registrar_notas.this, Notas.class);
                     startActivity(i);
                 }
-                else {
                     Toast.makeText(getApplicationContext(),"Ingrese un usuario y contraseña válido", Toast.LENGTH_SHORT).show();
-                }
+
             }
         },
                 new Response.ErrorListener() {
@@ -102,6 +107,7 @@ public class Registrar_notas extends AppCompatActivity {
                 }) {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
+                params.put("id", id);
                 params.put("titulo", nom_titu);
                 params.put("texto", tex_titu);
                 params.put("fecha", fecha_notas);
