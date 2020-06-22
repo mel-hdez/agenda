@@ -16,7 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.agenda_proyecto_final.Clase_Usuario.Sing_up;
+import com.example.agenda_proyecto_final.Clase_Usuario.Registrar_usuario;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sig = new Intent(Login.this, Sing_up.class);
+                Intent sig = new Intent(Login.this, Registrar_usuario.class);
                 startActivity(sig);
             }
         });

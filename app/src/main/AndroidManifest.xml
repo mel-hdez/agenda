@@ -14,12 +14,11 @@
         <activity android:name=".Clase_Notas.Registrar_notas" />
         <activity android:name=".Clase_Maestro.Registrar_maestros" />
         <activity android:name=".Clase_Materias.BuscarAsignatura" />
-        <activity android:name=".Clase_Usuario.Sing_up" />
         <activity android:name=".Clase_Maestro.Maestros" />
         <activity android:name=".Clase_Notas.Notas" />
         <activity android:name=".Clase_Tarea.Tareas"/>
         <activity android:name=".Clase_Materias.Materias" />
-        <activity android:name=".Registrar_usuario" />
+        <activity android:name=".Clase_Usuario.Registrar_usuario" />
         <activity android:name=".Menu_Principal" />
         <activity android:name=".Login">
             <intent-filter>

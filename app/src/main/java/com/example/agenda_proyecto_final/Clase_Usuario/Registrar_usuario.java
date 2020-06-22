@@ -1,4 +1,4 @@
-package com.example.agenda_proyecto_final;
+package com.example.agenda_proyecto_final.Clase_Usuario;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.agenda_proyecto_final.Login;
+import com.example.agenda_proyecto_final.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +41,7 @@ public class Registrar_usuario extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 RegistrarUsuario();
-                Toast.makeText(getApplicationContext(),"hola", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Guardado Correctamente", Toast.LENGTH_SHORT).show();
             }
         });
 
