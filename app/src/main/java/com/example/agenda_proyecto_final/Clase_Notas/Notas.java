@@ -77,7 +77,7 @@ import java.util.ArrayList;
                             }
                             mNotasAdapter = new NotasAdapter(Notas.this, mCitaList);
                             mRecyclerView.setAdapter(mNotasAdapter);
-                            //mNotasAdapter.setOntItemClickListener(Notas.this);
+                            mNotasAdapter.setOntItemClickListener(Notas.this);
                         }catch (JSONException e){
                             e.printStackTrace();
                         }
@@ -99,6 +99,6 @@ import java.util.ArrayList;
             detailIntent.putExtra(EXTRA_TITULO, clickedItem.getntitulo());
             detailIntent.putExtra(EXTRA_FECHA, clickedItem.getntexto());
             detailIntent.putExtra(EXTRA_TEXTO, clickedItem.getmfecha());
-
+            startActivity(detailIntent);
         }
     }
