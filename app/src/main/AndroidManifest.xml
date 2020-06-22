@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.agenda_proyecto_final">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Clase_Materias.Registrar_asignatura"></activity>
+        <activity android:name=".Clase_Notas.Notas_details"></activity>
+        <activity android:name=".Clase_Materias.Registrar_asignatura" />
         <activity android:name=".Clase_Notas.Registrar_notas" />
         <activity android:name=".Clase_Maestro.Registrar_maestros" />
         <activity android:name=".Clase_Materias.BuscarAsignatura" />
         <activity android:name=".Clase_Maestro.Maestros" />
         <activity android:name=".Clase_Notas.Notas" />
-        <activity android:name=".Clase_Tarea.Tareas"/>
+        <activity android:name=".Clase_Tarea.Tareas" />
         <activity android:name=".Clase_Materias.Materias" />
         <activity android:name=".Clase_Usuario.Registrar_usuario" />
         <activity android:name=".Menu_Principal" />
@@ -28,4 +30,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

@@ -17,18 +17,9 @@
             android:id="@+id/edit_nom_not_recy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre"
+            android:text="Título"
             android:textColor="@android:color/black"
             android:textSize="24sp"/>
-
-        <TextView
-            android:id="@+id/edi_fecha_not_recy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fecha:"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
-
     </LinearLayout>
 
 

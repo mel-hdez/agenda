@@ -39,8 +39,7 @@ public class Registrar_usuario extends AppCompatActivity  {
 
         bton_guarda.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                RegistrarUsuario();
+            public void onClick(View v) { RegistrarUsuario();
                 Toast.makeText(getApplicationContext(),"Guardado Correctamente", Toast.LENGTH_SHORT).show();
             }
         });
@@ -54,37 +53,33 @@ public class Registrar_usuario extends AppCompatActivity  {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
-                        response = response.replace("\n", "");
                         String[] separate = response.split("-");
 
                         if (separate[0].equals("1")) {
                             Intent i = new Intent(Registrar_usuario.this, Login.class);
-                            Bundle b = new Bundle();
-                            b.putString("id", separate[1]);
-                            i.putExtra("user", b);
                             startActivity(i);
                         }
                         else {
                             Toast.makeText(getApplicationContext(),"Ingrese un usuario y contraseña válido", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("deletePost", "Error:" + error);
-                    }
-                }) {
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("nombre", nombre_usu);
-                params.put("email", email_nuevo);
-                params.put("contraseña", contrasena_nueva);
-                return params;
-            }
-        };
-        Volley.newRequestQueue(this).add(request);
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("deletePost", "Error:" + error);
+                        }
+                    }) {
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("nombre", nombre_usu);
+                    params.put("email", email_nuevo);
+                    params.put("contraseña", contrasena_nueva);
+                    return params;
+                }
+            };
+            Volley.newRequestQueue(this).add(request);
+        }
+
+
     }
-
-
-}
