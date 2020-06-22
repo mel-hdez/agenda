@@ -17,10 +17,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.055">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,33 +40,46 @@
                 android:maxLength="24" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="332dp"
+            android:layout_height="100dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="31dp"
+                android:layout_height="41dp"
                 android:gravity="center"
-                android:text="Texto:" />
+                android:text="Texto:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.003"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.661" />
 
             <EditText
                 android:id="@+id/et_text_mod"
-                android:layout_width="274dp"
-                android:layout_height="match_parent"
+                android:layout_width="285dp"
+                android:layout_height="51dp"
                 android:gravity="center"
-                android:maxLength="24" />
-        </LinearLayout>
+                android:maxLength="24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.585" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
     <Button
         android:id="@+id/bton_guarda_notas_mod"
-        android:layout_width="57dp"
-        android:layout_height="53dp"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
         android:background="@drawable/ic_action_check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />

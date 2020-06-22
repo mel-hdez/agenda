@@ -53,6 +53,7 @@ public class Modificar_Notas extends AppCompatActivity {
             notasItem.ntexto(texton.getText().toString());
                         Toast.makeText(this,"Se Actualizo correctamente",Toast.LENGTH_SHORT).show();
 
+
         }
     }
 }

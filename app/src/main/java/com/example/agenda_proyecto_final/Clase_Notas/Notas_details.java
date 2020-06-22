@@ -2,6 +2,7 @@ package com.example.agenda_proyecto_final.Clase_Notas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import static com.example.agenda_proyecto_final.Clase_Notas.Notas.EXTRA_TEXTO;
 import static com.example.agenda_proyecto_final.Clase_Notas.Notas.EXTRA_TITULO;
 
 public class Notas_details extends AppCompatActivity {
-
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +32,14 @@ public class Notas_details extends AppCompatActivity {
         tvtitulo.setText("Titulo:" + titulo);
         tvfecha.setText("Fecha:"+fecha);
         tvtexto.setText("Texto:"+texto);
+
+    }
+
+    public void bton_agregar_nota1(View view) {
+        Intent sig = new Intent(Notas_details.this, Modificar_Notas.class);
+        Bundle b = new Bundle();
+        b.putString("id", id);
+        sig.putExtra("user", b);
+        startActivity(sig);
     }
 }
